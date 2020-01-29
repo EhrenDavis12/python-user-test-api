@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User, Group
+from quickstart.models import AppUser
 from rest_framework import viewsets
-from quickstart.serializers import UserSerializer, GroupSerializer
+from quickstart.serializers import UserSerializer, GroupSerializer, AppUserSerializer
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -17,3 +18,27 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+
+class AppUserViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows view or edit of app users
+    """
+    queryset = AppUser.objects.all().order_by('last_login')
+    serializer_class = AppUserSerializer
+
+
+class AppUserNonActiveViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows view or edit of app users that are not active
+    """
+    queryset = AppUser.objects.filter(login_count=0)
+    serializer_class = AppUserSerializer
+
+
+class AppUserActiveViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows view or edit of app users that are active
+    """
+    queryset = AppUser.objects.filter(login_count__gt=0)
+    serializer_class = AppUserSerializer
