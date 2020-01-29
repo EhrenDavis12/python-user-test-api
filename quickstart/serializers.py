@@ -1,4 +1,5 @@
 from django.contrib.auth.models import User, Group
+from quickstart.models import AppUser
 from rest_framework import serializers
 
 
@@ -12,3 +13,10 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
         fields = ['url', 'name']
+
+
+class AppUserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = AppUser
+        fields = ['id', 'username', 'last_login',
+                  'login_count', 'project_count']

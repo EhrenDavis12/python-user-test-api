@@ -1,0 +1,101 @@
+[
+  {
+    "model": "quickstart.appuser",
+    "pk": 1,
+    "fields": {
+      "id": 0,
+      "username": "ana",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 0,
+      "project_count": 12
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 2,
+    "fields": {
+      "id": 1,
+      "username": "tim",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 23,
+      "project_count": 234
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 3,
+    "fields": {
+      "id": 23,
+      "username": "kyle",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 4,
+      "project_count": 2354
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 4,
+    "fields": {
+      "id": 34,
+      "username": "alex",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 0,
+      "project_count": 6563
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 5,
+    "fields": {
+      "id": 234,
+      "username": "glenn",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 1,
+      "project_count": 3452
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 6,
+    "fields": {
+      "id": 633,
+      "username": "cort",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 1000,
+      "project_count": 2345
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 7,
+    "fields": {
+      "id": 693,
+      "username": "sean",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 3,
+      "project_count": 8654
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 8,
+    "fields": {
+      "id": 623,
+      "username": "violet",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 0,
+      "project_count": 4028
+    }
+  },
+  {
+    "model": "quickstart.appuser",
+    "pk": 9,
+    "fields": {
+      "id": 665,
+      "username": "nik",
+      "last_login": "2019-08-20T22:15:09.926Z",
+      "login_count": 0,
+      "project_count": 4428
+    }
+  }
+]

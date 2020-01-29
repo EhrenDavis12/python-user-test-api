@@ -12,13 +12,6 @@ Class-based views
 Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-
-from django.contrib import admin
-from django.urls import path
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
 """
 
 from django.urls import include, path
@@ -26,8 +19,13 @@ from rest_framework import routers
 from quickstart import views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+# router.register(r'users', views.UserViewSet)
+# router.register(r'groups', views.GroupViewSet)
+router.register(r'app-users-all', views.AppUserViewSet)
+router.register(r'app-users-non-active',
+                views.AppUserNonActiveViewSet, basename='usersnonactive')
+router.register(r'app-users-active', views.AppUserActiveViewSet,
+                basename='usersactive')
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
