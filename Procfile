@@ -1,1 +1,1 @@
-web: gunicorn python-user-test-api.wsgi --log-file
+web: gunicorn quickstart.wsgi --log-file
