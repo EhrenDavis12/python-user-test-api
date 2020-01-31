@@ -110,6 +110,15 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     'http://localhost:8080',
 #     'https://user-activity-monitor.herokuapp',
 # )
+CORS_ALLOW_HEADERS = (
+    'x-requested-with',
+    'content-type',
+    'accept',
+    'origin',
+    'authorization',
+    'x-csrftoken',
+    'access-control-allow-origin',
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
