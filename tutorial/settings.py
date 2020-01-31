@@ -104,12 +104,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8080',
-    'https://user-activity-monitor.herokuapp',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:8080',
+#     'https://user-activity-monitor.herokuapp',
+# )
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
