@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8080',
-    'https://user-activity-monitor.herokuapp.com',
+    'https://user-activity-monitor.herokuapp',
 )
 
 # Internationalization
