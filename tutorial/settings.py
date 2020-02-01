@@ -105,6 +105,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://localhost:8000',
+                        'https://mywebsite:8000', 'https://user-activity-monitor.herokuapp', 'https://user-activity-monitor.herokuapp.com']
+CSRF_COOKIE_NAME = "csrftoken"
+CSRF_HEADER_NAME = [
+    'HTTP_X_CSRFTOKEN'
+]
+
 SECURE_SSL_REDIRECT = True
 SECURE_SSL_REDIRECT = False
 CORS_ORIGIN_ALLOW_ALL = True
