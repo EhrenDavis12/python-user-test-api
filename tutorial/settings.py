@@ -110,14 +110,23 @@ CORS_ORIGIN_ALLOW_ALL = True
 #     'http://localhost:8080',
 #     'https://user-activity-monitor.herokuapp',
 # )
+CORS_ALLOW_METHODS = (
+    'GET',
+    'POST',
+    'PUT',
+    'PATCH',
+    'DELETE',
+    'OPTIONS'
+)
+
 CORS_ALLOW_HEADERS = (
+    'Access-Control-Allow-Origin',
     'x-requested-with',
     'content-type',
     'accept',
     'origin',
     'authorization',
-    'x-csrftoken',
-    'access-control-allow-origin',
+    'x-csrftoken'
 )
 
 # Internationalization
