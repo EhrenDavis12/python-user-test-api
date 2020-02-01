@@ -105,22 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CSRF_TRUSTED_ORIGINS = ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://localhost:8000',
-                        'https://mywebsite:8000', 'https://user-activity-monitor.herokuapp', 'https://user-activity-monitor.herokuapp.com']
-CSRF_COOKIE_NAME = "csrftoken"
-CSRF_HEADER_NAME = [
-    'HTTP_X_CSRFTOKEN'
-]
-
-SECURE_SSL_REDIRECT = True
-SECURE_SSL_REDIRECT = False
+# SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = False
 CORS_ORIGIN_ALLOW_ALL = True
 # CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8080',
-    'https://user-activity-monitor.herokuapp',
-    'https://72.203.243.248',
-]
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:8080',
+#     'https://user-activity-monitor.herokuapp',
+#     'https://72.203.243.248',
+# ]
 
 # CORS_ORIGIN_WHITELIST = ['http://localhost:8080',
 #                          'https://user-activity-monitor.herokuapp.com/',
@@ -129,26 +122,26 @@ CORS_ORIGIN_WHITELIST = [
 #                          'https://72.203.243.248/non-active-users',
 #                          'https://72.203.243.248/active-users']
 
-CORS_ALLOW_METHODS = [
-    'DELETE',
-    'GET',
-    'OPTIONS',
-    'PATCH',
-    'POST',
-    'PUT',
-]
+# CORS_ALLOW_METHODS = [
+#     'DELETE',
+#     'GET',
+#     'OPTIONS',
+#     'PATCH',
+#     'POST',
+#     'PUT',
+# ]
 
-CORS_ALLOW_HEADERS = [
-    'accept',
-    'accept-encoding',
-    'authorization',
-    'content-type',
-    'dnt',
-    'origin',
-    'user-agent',
-    'x-csrftoken',
-    'x-requested-with',
-]
+# CORS_ALLOW_HEADERS = [
+#     'accept',
+#     'accept-encoding',
+#     'authorization',
+#     'content-type',
+#     'dnt',
+#     'origin',
+#     'user-agent',
+#     'x-csrftoken',
+#     'x-requested-with',
+# ]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
