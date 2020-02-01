@@ -26,7 +26,7 @@ SECRET_KEY = '*+9(z0a3=xwp^(#u%gp0%4d)#8$t2ojvxbyvdjru-+wfa7f07g'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'python-user-test-api.herokuapp.com', ]
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['python-user-test-api.herokuapp.com']
 
 
 # Application definition
