@@ -26,7 +26,7 @@ SECRET_KEY = '*+9(z0a3=xwp^(#u%gp0%4d)#8$t2ojvxbyvdjru-+wfa7f07g'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['127.0.0.1', 'python-user-test-api.herokuapp.com', ]
-ALLOWED_HOSTS = ['python-user-test-api.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'python-user-test-api.herokuapp.com']
 
 
 # Application definition
@@ -105,31 +105,43 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 CORS_ORIGIN_ALLOW_ALL = True
 # CORS_ORIGIN_ALLOW_ALL = False
-# CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:8080',
-#     'https://user-activity-monitor.herokuapp',
-#     'https://72.203.243.248',
-# )
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:8080',
+    'https://user-activity-monitor.herokuapp',
+    'https://72.203.243.248',
+]
 
-# CORS_ALLOW_METHODS = (
-#     'GET',
-#     'POST',
-#     'PUT',
-#     'PATCH',
-#     'DELETE',
-#     'OPTIONS'
-# )
+# CORS_ORIGIN_WHITELIST = ['http://localhost:8080',
+#                          'https://user-activity-monitor.herokuapp.com/',
+#                          'https://user-activity-monitor.herokuapp.com/non-active-users',
+#                          'https://user-activity-monitor.herokuapp.com/active-users',
+#                          'https://72.203.243.248/non-active-users',
+#                          'https://72.203.243.248/active-users']
 
-# CORS_ALLOW_HEADERS = (
-#     'x-requested-with',
-#     'content-type',
-#     'accept',
-#     'origin',
-#     'authorization',
-#     'x-csrftoken'
-# )
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
