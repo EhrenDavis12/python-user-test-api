@@ -25,7 +25,8 @@ SECRET_KEY = '*+9(z0a3=xwp^(#u%gp0%4d)#8$t2ojvxbyvdjru-+wfa7f07g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'python-user-test-api.herokuapp.com', ]
+# ALLOWED_HOSTS = ['127.0.0.1', 'python-user-test-api.herokuapp.com', ]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -104,32 +105,31 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# CORS_ORIGIN_ALLOW_ALL = True
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8080',
-    'https://user-activity-monitor.herokuapp',
-    'https://72.203.243.248',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:8080',
+#     'https://user-activity-monitor.herokuapp',
+#     'https://72.203.243.248',
+# )
 
-CORS_ALLOW_METHODS = (
-    'GET',
-    'POST',
-    'PUT',
-    'PATCH',
-    'DELETE',
-    'OPTIONS'
-)
+# CORS_ALLOW_METHODS = (
+#     'GET',
+#     'POST',
+#     'PUT',
+#     'PATCH',
+#     'DELETE',
+#     'OPTIONS'
+# )
 
-CORS_ALLOW_HEADERS = (
-    'Access-Control-Allow-Origin',
-    'x-requested-with',
-    'content-type',
-    'accept',
-    'origin',
-    'authorization',
-    'x-csrftoken'
-)
+# CORS_ALLOW_HEADERS = (
+#     'x-requested-with',
+#     'content-type',
+#     'accept',
+#     'origin',
+#     'authorization',
+#     'x-csrftoken'
+# )
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
