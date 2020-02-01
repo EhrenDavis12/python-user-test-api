@@ -104,13 +104,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_ALLOW_ALL = False
-# CORS_ORIGIN_WHITELIST = (
-#     'http://localhost:8080',
-#     'https://user-activity-monitor.herokuapp',
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+    'https://user-activity-monitor.herokuapp',
+    'https://72.203.243.248',
 # )
-CORS_ALLOW_METHODS = (
+CORS_ALLOW_METHODS=(
     'GET',
     'POST',
     'PUT',
@@ -119,7 +120,7 @@ CORS_ALLOW_METHODS = (
     'OPTIONS'
 )
 
-CORS_ALLOW_HEADERS = (
+CORS_ALLOW_HEADERS=(
     'Access-Control-Allow-Origin',
     'x-requested-with',
     'content-type',
@@ -132,20 +133,20 @@ CORS_ALLOW_HEADERS = (
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE='en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE='UTC'
 
-USE_I18N = True
+USE_I18N=True
 
-USE_L10N = True
+USE_L10N=True
 
-USE_TZ = True
+USE_TZ=True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_URL='/static/'
+PROJECT_DIR=os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT=os.path.join(PROJECT_DIR, 'static')
