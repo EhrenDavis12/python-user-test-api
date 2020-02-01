@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+# import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -25,7 +25,7 @@ SECRET_KEY = '*+9(z0a3=xwp^(#u%gp0%4d)#8$t2ojvxbyvdjru-+wfa7f07g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'python-user-test-api.herokuapp.com', ]
+ALLOWED_HOSTS = ['127.0.0.1', 'python-user-test-api.herokuapp.com']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -104,7 +105,43 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = False
 CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_WHITELIST = [
+#     'http://localhost:8080',
+#     'https://user-activity-monitor.herokuapp',
+#     'https://72.203.243.248',
+# ]
+
+# CORS_ORIGIN_WHITELIST = ['http://localhost:8080',
+#                          'https://user-activity-monitor.herokuapp.com/',
+#                          'https://user-activity-monitor.herokuapp.com/non-active-users',
+#                          'https://user-activity-monitor.herokuapp.com/active-users',
+#                          'https://72.203.243.248/non-active-users',
+#                          'https://72.203.243.248/active-users']
+
+# CORS_ALLOW_METHODS = [
+#     'DELETE',
+#     'GET',
+#     'OPTIONS',
+#     'PATCH',
+#     'POST',
+#     'PUT',
+# ]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -126,3 +163,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+
+# django_heroku.settings(locals())
