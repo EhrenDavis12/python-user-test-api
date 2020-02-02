@@ -19,9 +19,7 @@ from rest_framework import routers
 from quickstart import views
 
 router = routers.DefaultRouter()
-# router.register(r'users', views.UserViewSet)
-# router.register(r'groups', views.GroupViewSet)
-router.register(r'app-users-all', views.AppUserViewSet)
+router.register(r'app-users-all', views.AppUserAllViewSet)
 router.register(r'app-users-non-active',
                 views.AppUserNonActiveViewSet, basename='usersnonactive')
 router.register(r'app-users-active', views.AppUserActiveViewSet,
