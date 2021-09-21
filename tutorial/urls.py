@@ -28,6 +28,7 @@ router.register(r'app-users-active', views.AppUserActiveViewSet,
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
 urlpatterns = [
+    path('api/consume_api/', include('consumeApiCodeChallenge.urls')),
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 ]
