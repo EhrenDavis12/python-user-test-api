@@ -1,5 +1,4 @@
-from django.conf.urls import url
-from django.urls import include, path
+from django.urls import path, re_path
 from rest_framework import routers
 from .views import CombatActionView
 
@@ -7,5 +6,5 @@ from .views import CombatActionView
 # router.register('combat_action', CombatActionView.as_view(), basename="CombatAction")
 
 urlpatterns = [
-    url(r'^combat_action/$', CombatActionView.as_view()),
+    re_path(r'^combat_action/$', CombatActionView.as_view()),
 ]
